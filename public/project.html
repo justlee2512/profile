@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Richard Le Image Drive | Project</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body{background:#080a0d;color:#f5f5f5}
+    .detail-nav{max-width:1180px;margin:auto;padding:25px 0;display:flex;align-items:center;justify-content:space-between}
+    .back{color:#9299a4;font-size:12px}.back:hover{color:#fff}
+    .case{max-width:1180px;margin:auto;padding:85px 0 100px}
+    .live{display:inline-flex;align-items:center;gap:10px;color:#111;background:#fff;border-radius:28px;padding:13px 19px;font-size:12px;font-weight:800;margin-bottom:31px;transition:.2s}.live:hover{transform:translateY(-2px);box-shadow:0 10px 35px #fff2}.live i{width:8px;height:8px;border-radius:50%;background:#4cb56a;box-shadow:0 0 0 5px #4cb56a20}
+    .intro{display:grid;grid-template-columns:1.15fr .85fr;gap:90px;align-items:end;margin-bottom:58px}.intro h1{font:800 clamp(47px,6vw,76px)/.98 Manrope,sans-serif;letter-spacing:-3.5px;margin:0}.intro h1 em{display:block;color:#50a7ff;font-style:normal}.intro-copy{color:#a4a9b2;font-size:15px;line-height:1.9}.intro-copy strong{display:block;color:#fff;font-size:13px;margin-bottom:8px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tags span{border:1px solid #343942;border-radius:20px;padding:7px 10px;color:#c7cbd2;font:10px 'DM Mono'}
+    .visual{border:1px solid #29313b;border-radius:14px;background:#07101a;padding:8px;overflow:hidden}.visual img{display:block;width:100%;height:auto;border-radius:8px}
+    .how{padding-top:75px}.how-head{max-width:640px}.how h2{font-size:36px;margin-bottom:14px}.how-head>p{color:#989fa9;line-height:1.8}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}.step{border-top:1px solid #30353d;padding:20px 4px}.step b{color:#50a7ff;font:11px 'DM Mono'}.step h3{font-size:15px;margin:15px 0 8px}.step p{color:#9299a4;font-size:11px;line-height:1.75;margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:55px}.feature{background:#12151a;border:1px solid #272c33;border-radius:10px;padding:22px}.feature h3{font-size:13px;margin:0 0 10px}.feature p{color:#939aa4;font-size:11px;line-height:1.7;margin:0}
+    @media(max-width:720px){.detail-nav{padding:20px}.case{padding:50px 20px 70px}.intro{grid-template-columns:1fr;gap:28px}.intro h1{font-size:48px;letter-spacing:-2.5px}.steps,.features{grid-template-columns:1fr}.visual{margin-left:-12px;margin-right:-12px;padding:3px;border-radius:8px}.how{padding-top:55px}}
+  </style>
+</head>
+<body>
+  <header class="detail-nav"><a class="brand" href="/">Richard</a><a class="back" href="/#work">← Back to projects</a></header>
+  <main class="case">
+    <a class="live" href="https://image.chocomin.online/login" target="_blank" rel="noopener noreferrer"><i></i> Open live project ↗</a>
+    <section class="intro">
+      <h1>Richard Le<em>Image Drive</em></h1>
+      <div class="intro-copy"><strong>Private image storage built for reliability.</strong>A multi-account Node.js application for uploading, organizing, sharing and downloading image libraries. Images, metadata, sessions and WebP thumbnails are stored directly in PostgreSQL.<div class="tags"><span>Node.js 20+</span><span>PostgreSQL BYTEA</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>Argo CD</span></div></div>
+    </section>
+    <figure class="visual"><img src="/uploads/richard-image-drive-architecture.png" alt="Richard Le Image Drive system architecture"></figure>
+    <section class="how">
+      <div class="how-head"><p class="eyebrow">How it works</p><h2>From upload to storage</h2><p>The application keeps the web layer stateless so traffic can reach any Kubernetes replica, while PostgreSQL remains the single source of truth for files and user sessions.</p></div>
+      <div class="steps">
+        <article class="step"><b>01</b><h3>Upload and organize</h3><p>Users upload images sequentially, move multiple items between folders and manage their private library.</p></article>
+        <article class="step"><b>02</b><h3>Process images</h3><p>The Node.js app validates each file and creates WebP thumbnails immediately or lazily on first view.</p></article>
+        <article class="step"><b>03</b><h3>Store in PostgreSQL</h3><p>Original images, thumbnails and metadata are persisted with BYTEA. Sessions are shared between all replicas.</p></article>
+        <article class="step"><b>04</b><h3>Deliver securely</h3><p>Cloudflare and NGINX Ingress route HTTPS traffic. Selected images can be downloaded together as a ZIP.</p></article>
+      </div>
+      <div class="features">
+        <article class="feature"><h3>Multi-account access</h3><p>Supports up to five isolated accounts with database-backed sessions and a 15-minute sliding idle timeout.</p></article>
+        <article class="feature"><h3>Kubernetes ready</h3><p>Readiness and liveness probes, shared sessions and configurable connection pools support multiple replicas without sticky sessions.</p></article>
+        <article class="feature"><h3>Database protection</h3><p>Upload/download concurrency limits reduce pressure on PostgreSQL and HDD storage while handling large image files.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 LÊ ANH TUẤN. All rights reserved.</footer>
+</body>
+</html>

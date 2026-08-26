@@ -1,0 +1,45 @@
+{
+  "name": "Tuấn Lê",
+  "role": "Middle DevOps Engineer",
+  "location": "Ho Chi Minh City",
+  "email": "anhtuanle.tp@gmail.com",
+  "phone": "0908 025 984",
+  "heroImage": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=85",
+  "about": "DevOps/Infrastructure Engineer with hands-on experience in enterprise banking environments. Specialized in Linux, Kubernetes, CI/CD automation, VMware infrastructure, and security operations.",
+  "objective": "Focused on platform engineering and cloud-native technologies, with the goal of progressing into a Senior DevOps Engineer role.",
+  "skills": [
+    "Kubernetes & Docker",
+    "CI/CD: GitHub, Jenkins, Ansible",
+    "Terraform & Ansible Automation",
+    "VMware vSphere / ESXi / vCenter",
+    "Linux, Windows Server, VyOS, pfSense",
+    "Grafana, Prometheus, Zabbix"
+  ],
+  "experience": [
+    {
+      "company": "HSBC",
+      "period": "11/2024 — Present",
+      "title": "Infrastructure and DevOps Engineer",
+      "description": "Operating HSBC Internal Cloud with approximately 300 VMs; developing CI/CD using GitHub, Jenkins, Maven, Nexus, SonarQube, Sonatype IQ, Ansible, Kubernetes, and Helm. Automating patching, certificate renewal, and secrets management with HashiCorp Vault."
+    },
+    {
+      "company": "TERABOX",
+      "period": "02/2022 — 06/2023",
+      "title": "System Engineer (Guardian – IT Onsite)",
+      "description": "Managed vCenter/vSphere infrastructure with 300+ Linux and Windows VMs; administered Veeam backup and recovery; built monitoring with Grafana, Prometheus, InfluxDB, and Telegraf. Deployed a three-node Kubernetes test cluster, automated VM provisioning with Terraform, and managed pfSense, Meraki, and Zabbix."
+    },
+    {
+      "company": "International Distribution Corporation",
+      "period": "09/2020 — 08/2021",
+      "title": "System Engineer",
+      "description": "Managed Proxmox infrastructure with 100+ Linux VMs; automated VM deployment with Ansible; used Docker for Asterisk images supporting 3CX VoIP systems. Implemented OpenVPN for 20+ users and designed virtual network systems with VyOS."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Richard Le Image Drive",
+      "tag": "Node.js • PostgreSQL • Kubernetes",
+      "image": "/uploads/richard-image-drive-architecture.png"
+    }
+  ]
+}
